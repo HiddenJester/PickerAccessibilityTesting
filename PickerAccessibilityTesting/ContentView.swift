@@ -63,7 +63,7 @@ private extension ContentView {
     /// - Returns: A `Text` view containing the content's text, with the content's ID and the accessibility label from the content provided.
     func pickerElementView(forContent content: PickerContent) -> some View {
         Text(content.text)
-            // ⬇️ Only works if you activate a control first.
+            // ⬇️ Only works in the segmented Picker if you activate a control first.
             .accessibilityLabel(content.accessibility)
             .tag(content.id)
     }
